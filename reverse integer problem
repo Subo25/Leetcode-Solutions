@@ -1,0 +1,34 @@
+#include <iostream>
+#include <climits>
+
+class Solution {
+public:
+    int reverse(int x) {
+        int s = 0;
+        while (x != 0) {
+            int r = x % 10;
+            x = x / 10;
+            
+            if (s > INT_MAX / 10 || (s == INT_MAX / 10 && r > 7)) return 0;
+            if (s < INT_MIN / 10 || (s == INT_MIN / 10 && r < -8)) return 0;
+            
+            s = s * 10 + r;
+        }
+        return s;
+    }
+};
+
+
+int main() {
+    Solution solver;
+    
+  
+    int test1 = 123;
+    cout << "Input: " << test1 << " -> Reversed: " << solver.reverse(test1) << endl;
+    
+  
+    int test2 = -456;
+    cout << "Input: " << test2 << " -> Reversed: " << solver.reverse(test2) << endl;
+
+    return 0;
+}
