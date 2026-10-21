@@ -1,0 +1,24 @@
+class Solution {
+public:
+    bool isPalindrome(int x) {
+        int r;
+        long long s=0;
+        int t=x;
+        while(x!=0)
+        {
+             //negative numbers are not palindrome
+            if(x<0)
+            {
+                return {0};
+            }
+            r=x%10;
+            x=x/10;
+            s=10*s+r;
+        }
+        if(s==t)
+        {
+            return {1};
+        }
+        return {};
+    }
+};
