@@ -34,7 +34,7 @@ The solutions are organized by problem categories or directly by problem numbers
 | 🟢 Easy | `09` |
 | 🟡 Medium | `03` |
 | 🔴 Hard | `00` |
-| **Total** | **`00`** |
+| **Total** | **`12`** |
 
 ---
 
